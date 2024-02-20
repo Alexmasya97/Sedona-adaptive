@@ -1,0 +1,141 @@
+.page-header {
+  background-color: $white;
+  display: flex;
+  padding: 17px 20px;
+  justify-content: end;
+  height: 22px;
+
+  &__logo {
+    position: absolute;
+    margin-left: 40%;
+    width: 102px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__toggle {
+    width: 23px;
+    height: 4px;
+    background-color: $main-blue;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 23px;
+      height: 4px;
+      background-color: $main-blue;
+      top: 9px;
+      left: 0px
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 23px;
+      height: 4px;
+      background-color: $main-blue;
+      top: 18px;
+      left: 0px
+    }
+  }
+
+  &__nav {
+    display: none;
+  }
+
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    justify-content: start;
+
+    &__toggle {
+      display: none;
+    }
+
+    &__nav {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .nav {
+    &__list {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    &__item-right {
+      text-align: end;
+    }
+
+    &__item {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 14px;
+
+
+      a {
+        color: $black;
+
+        &:hover{
+        color: $main-blue;
+        }
+        &:visited {
+          opacity: 0.3;
+        }
+      }
+
+      &:nth-child(1) {
+        grid-column: 1/2;
+      }
+
+      &:nth-child(2) {
+        grid-column: 2/3;
+      }
+
+      &:nth-child(3) {
+        grid-column: 4/5;
+      }
+
+      &:nth-child(4) {
+        grid-column: 5/-1;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+       &__logo {
+      z-index: 2;
+
+      &::before {
+        position: absolute;
+        background-color: $main-blue;
+        border-radius: 10px;
+        content: "";
+        width: 160px;
+        height: 160px;
+        top: 10px;
+        transform: rotate(45deg);
+        top: -90px;
+        left: -30px;
+        z-index: -1;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        ;
+      }
+    }
+
+    .logo-img {
+      order: 0;
+    }
+  }
+
+}

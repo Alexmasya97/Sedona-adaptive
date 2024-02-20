@@ -1,0 +1,41 @@
+.main-banner{
+   background: url(../image/desktop/back-desktop.jpg.webp) no-repeat;
+   position: relative;
+   z-index: -1;
+   background-position: 50% 30%;
+   display: flex;
+   flex-direction: column;
+
+   &__slogan{
+    width: 282px;
+    height: 214px;
+    margin: 0 auto;
+    padding: 90px 19px 85px;
+
+   }
+   &__decoration{
+    object-fit: none;
+    // position: absolute;
+     bottom: 0;
+     height: 57px;
+     justify-self: center;
+   }
+
+}
+@media (min-width: $tablet-width) {
+  .main-banner{
+    object-fit: fill;
+    &__decoration{
+      object-fit: fill;
+  }
+}
+  .page-header {
+    &__slogan{
+      width: 461px;
+      height: 350px;
+
+
+    }
+  }
+
+}
