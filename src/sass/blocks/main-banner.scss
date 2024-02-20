@@ -24,7 +24,7 @@
 }
 @media (min-width: $tablet-width) {
   .main-banner{
-    object-fit: fill;
+    object-fit: none;
     &__decoration{
       object-fit: fill;
   }
@@ -33,9 +33,6 @@
     &__slogan{
       width: 461px;
       height: 350px;
-
-
     }
   }
-
 }
