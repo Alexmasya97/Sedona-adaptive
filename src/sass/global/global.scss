@@ -87,6 +87,13 @@ img {
   text-transform: uppercase;
   text-align: center;
   padding: 14px 32px 17px;
+  &:hover{
+    background-color: #669EC0;
+  }
+  &:visited{
+    background-color: #5496BD;
+    opacity: 0.3;
+  }
 }
 @media (min-width: $tablet-width) {
   .title {

@@ -23,7 +23,7 @@
   .other-reasons{
     &__list {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       padding: 0;
     }
     &__item{

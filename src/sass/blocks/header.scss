@@ -1,7 +1,7 @@
 .page-header {
   background-color: $white;
   display: flex;
-  padding: 17px 20px;
+  padding: 17px 34px;
   justify-content: end;
   height: 22px;
 
@@ -41,8 +41,14 @@
       background-color: $main-blue;
       top: 18px;
       left: 0px
+      }
+      &:hover{
+        opacity: 0.6;
+      }
+      &:visited{
+        opacity: 0.3;
+      }
     }
-  }
 
   &__nav {
     display: none;
@@ -68,7 +74,7 @@
     &__list {
       display: grid;
       width: 100%;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(5, 1fr);
     }
 
     &__item-right {
@@ -79,6 +85,7 @@
       font-weight: 700;
       text-transform: uppercase;
       font-size: 14px;
+      cursor: pointer;
 
 
       a {
@@ -90,6 +97,15 @@
         &:visited {
           opacity: 0.3;
         }
+      }
+      &--current{
+        a{
+          color: #766357;
+          &:hover{
+            color:#604E43;
+          }
+        }
+
       }
 
       &:nth-child(1) {
