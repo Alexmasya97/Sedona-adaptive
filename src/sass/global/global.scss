@@ -1,18 +1,16 @@
-// Breakpoints
+@font-face {
+  font-family: "PTSans-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/PTSans-Regular.ttf") format("ttf");
+}
 
-$tablet-width: 768px;
-$desktop-width: 1200px;
-$mobile-width-only: 767px;
-$wide-desktop:1280px;
-///
-/// colours
-$white: #FFFFFF;
-$main-blue: #81B3D2;
-$black: #000000;
-$main-beige:#F2F2F2;
-$reason-beige: #EEEEEE;
-///
-
+@font-face {
+  font-family: "PTSans-Bold";
+  font-style: bold;
+  font-weight: 700;
+  src: url("./fonts/PTSans-Bold.ttf") format("ttf");
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -27,7 +25,7 @@ $reason-beige: #EEEEEE;
   overflow: hidden;
 }
 
-img{
+img {
   display: block;
 }
 
@@ -38,12 +36,10 @@ p,
 span,
 h2,
 h3,
-button
- {
+button {
   margin: 0;
   padding: 0;
   border: initial
-
 }
 
 a {
@@ -58,11 +54,13 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 .page__body {
   background-color: $main-beige;
   margin: 0;
   font-size: 14px;
   padding: 0;
+  font-family: "PT Sans","Arial", sans-serif;
 }
 
 .title {
@@ -71,49 +69,38 @@ img {
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
+  font-family: PTSans-Regular;
+  font-family: "PT Sans","Arial", sans-serif;
 
 }
-.subtitle{
+
+.subtitle {
   font-size: 14px;
   font-weight: 400;
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
-  // margin-top: 43px;
-}
+  }
+
 .blue-bottom {
   background-color: $main-blue;
   color: $white;
   text-transform: uppercase;
   text-align: center;
   padding: 14px 32px 17px;
-  &:hover{
+
+  &:hover {
     background-color: #669EC0;
   }
-  &:visited{
+
+  &:visited {
     background-color: #5496BD;
     opacity: 0.3;
   }
 }
+
 @media (min-width: $tablet-width) {
   .title {
     font-size: 21px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .main-wrapper{
-    padding: 0 40px;
-    margin: 0 auto;
-  }
-  .shadow {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-}
-
-@media (min-width: $wide-desktop) {
-  .shadow {
-    width: 1200px;
-    margin: 0 auto;
   }
 }

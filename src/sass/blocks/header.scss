@@ -1,9 +1,6 @@
 .page-header {
   background-color: $white;
-  display: flex;
-  padding: 17px 34px;
-  justify-content: end;
-  height: 22px;
+  height: 56px;
 
   &__logo {
     position: absolute;
@@ -14,6 +11,19 @@
     left: 0;
     bottom: 0;
     right: 0;
+    z-index: 1;
+
+  }
+}
+.nav {
+  display: flex;
+  padding: 17px 20px;
+  justify-content: end;
+
+
+
+  &__wrapper{
+    display: none;
   }
 
   &__toggle {
@@ -29,7 +39,7 @@
       width: 23px;
       height: 4px;
       background-color: $main-blue;
-      top: 9px;
+      top: 8px;
       left: 0px
     }
 
@@ -39,7 +49,7 @@
       width: 23px;
       height: 4px;
       background-color: $main-blue;
-      top: 18px;
+      top: 16px;
       left: 0px
       }
       &:hover{
@@ -49,44 +59,104 @@
         opacity: 0.3;
       }
     }
-
-  &__nav {
-    display: none;
-  }
-
 }
 
+.nav--open {
+  padding: 0;
+  background-color: $main-blue;
+  position: absolute;
+  z-index: 2;
+  min-width: 100%;
+  // min-height: 90px;
+  // top:10px;
+
+  .nav {
+
+    &__list {
+       display: block;
+       display: flex;
+       flex-direction: column;
+
+      //  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+    &__item {
+      padding-top: 10px;
+      padding-bottom: 5px;
+      text-align: center;
+      border-top: 1px solid #688FA7;
+      border-bottom: 1px solid #9AC3D8;
+
+
+      a {
+        text-transform: uppercase;
+        color: $white;
+        font-weight: 700;
+        font-size: 18px;
+      }
+    }
+    &__toggle {
+      cursor: pointer;
+      width: 0;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 17px;
+        left: 88vw;
+        width: 27px;
+        height: 4px;
+        background-color: $white;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+
+    }
+    &__wrapper {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+
 @media (min-width: $tablet-width) {
-  .page-header {
-    justify-content: start;
+  .nav--open {
+    display: none;
+  }
+  .nav {
+    display: block;
+   &__wrapper {
+    display: block;
+   }
 
     &__toggle {
       display: none;
     }
 
-    &__nav {
-      display: block;
-      width: 100%;
-    }
-  }
-
-  .nav {
     &__list {
       display: grid;
       width: 100%;
       grid-template-columns: repeat(5, 1fr);
     }
 
-    &__item-right {
-      text-align: end;
-    }
 
     &__item {
       font-weight: 700;
       text-transform: uppercase;
       font-size: 14px;
       cursor: pointer;
+      margin-right: 47px;
 
+      &--right {
+        text-align: end;
+
+      }
 
       a {
         color: $black;

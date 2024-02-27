@@ -1,21 +1,25 @@
 .photo-reason {
-  &__wrapper{
+  &__wrapper {
     height: 256px;
   }
 
 }
+
 .reason {
   background-color: $main-blue;
   color: $white;
   padding: 20px 13px 39px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 191px;
 
   &__number {
     text-align: center;
     font-size: 14px;
-    margin-top: 21px;
-    margin-bottom: 28px;
   }
-  &-photo{
+
+  &-photo {
     object-fit: cover;
     min-height: 100%;
     min-width: 100%;
@@ -36,5 +40,8 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
-}
 
+  .reason {
+    padding: 40px 32px 34px;
+  }
+}

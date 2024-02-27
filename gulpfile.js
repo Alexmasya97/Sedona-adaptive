@@ -28,6 +28,11 @@ const paths = {
   svg:  {
     src: 'src/image/**/*.svg',
     dest: 'build/image/icon'
+  },
+
+  fonts: {
+    src: 'src/fonts/**/*.ttf',
+    dest: 'build/fonts/'
   }
 
 };
@@ -64,6 +69,13 @@ export const convertToWebp = () => {
     .pipe(gulp.dest(paths.images.dest));
 };
 
+export const fonts = () => {
+  return gulp.src('src/fonts/**/*')
+    .pipe(gulp.dest('build/fonts'));
+};
+
+gulp.task('fonts', fonts);
+
 const server = (done) => {
   sync.init({
     server: {
@@ -96,19 +108,14 @@ const watcher = () => {
 
 gulp.task(
   'build',
-  gulp.series(clean, gulp.parallel(styles, html, svg, convertToWebp), gulp.parallel(server, watcher))
+  gulp.series(clean, gulp.parallel(styles, html, svg, convertToWebp, fonts), gulp.parallel(server, watcher))
 );
+
 
 gulp.task('default', gulp.series(clean, gulp.parallel(svg, convertToWebp)));
 
-// export const images = () => {
-//   return gulp
-//     .src(paths.images.src)
-//     .pipe(imagemin())
-//     .pipe(gulp.dest(paths.images.dest))
-//     .pipe(sync.stream());
-// };
+gulp.task('fonts', function() {
+  return gulp.src('app/fonts/**/*')
+    .pipe(gulp.dest('dist/fonts'))
+})
 
-// export const build = gulp.series(clean, gulp.parallel(styles, html, svg, convertToWebp, images));
-
-// gulp.task('build', gulp.series(build, gulp.parallel(server, watcher)));

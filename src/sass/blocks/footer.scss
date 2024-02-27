@@ -4,7 +4,15 @@
   flex-direction: column;
   padding: 28px 76px 22px;
   gap:33px;
-
+}
+.html-academy-svg {
+  color: black;
+  &:hover {
+    color: $main-blue;
+  }
+  &:visited {
+    opacity: 0.3;
+  }
 }
 
 .social {
@@ -19,6 +27,12 @@
     height: 48px;
     display: flex;
     justify-content: center;
+    &:hover {
+      background-color: #669EC0;
+    }
+    &:visited {
+      background-color: #5496BD;
+    }
 
   }
   &__link {
@@ -29,6 +43,10 @@
  align-items: center;
     align-self: center;
     align-content: center;
+    color: $white;
+    &:visited {
+      opacity: 0.3;
+    }
   }
 }
 .copyright{

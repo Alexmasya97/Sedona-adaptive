@@ -19,6 +19,12 @@
     }
 
   }
+  &__svg {
+    max-width: 40px;
+  }
+  &__icon {
+    max-width: 40px;
+  }
 
   &__info {
     display: flex;
@@ -33,7 +39,9 @@
   &__text {
     text-align: start;
   }
-}
+  }
+
+
 
 @media (min-width: $tablet-width) {
   .service {
@@ -47,10 +55,22 @@
       flex-direction: column;
       padding: 0 36px;
       margin: 0;
+      justify-content: center;
 
       &:nth-last-of-type(2) {
         order: 0;
       }
+    }
+
+    &__svg {
+      max-width: 76px;
+      align-self:center;
+
+    }
+    &__icon {
+      min-width: 76px;
+      justify-self:center;
+
     }
 
     &__heading {
@@ -61,10 +81,11 @@
       text-align: center;
     }
 
-    &__svg {
-      text-align: center;
-    }
+    // &__svg {
+    //   text-align: center;
+    // }
 
   }
 
 }
+

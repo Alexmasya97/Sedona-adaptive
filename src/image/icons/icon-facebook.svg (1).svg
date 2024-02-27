@@ -1,0 +1,8 @@
+<svg class="facebook-svg" width="8.7" height="18.9" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+  <linearGradient id="a" x1="4.35" y1="0" x2="4.35" y2="18.9" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#FFF"/><stop offset="1" stop-color="#E1E1E1"/></linearGradient>
+  </defs>
+  <path d="M6.3 3.4h2.4V0H5.8C2.7.2 1.5 2.4 1.9 6.1H0v3.5h2v9.3h3.8V9.6h2.9V6.1H5.8c0-1 0-2.4.5-2.7Z" fill="#FFF"/>
+  <path d="M6.3 3.4h2.4V0H5.8C2.7.2 1.5 2.4 1.9 6.1H0v3.5h2v9.3h3.8V9.6h2.9V6.1H5.8c0-1 0-2.4.5-2.7Z" fill="none"/>
+</svg>

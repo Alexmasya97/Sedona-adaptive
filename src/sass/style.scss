@@ -1,4 +1,6 @@
+@import "./global/variables";
 @import "./global/global.scss";
+@import "./blocks/main-wrapper.scss";
 @import "./blocks/header.scss";
 @import "./blocks/main-banner.scss";
 @import "./blocks/text-block.scss";
@@ -9,4 +11,3 @@
 @import "./blocks/booking-link.scss";
 @import "./blocks/map";
 @import "./blocks/footer";
-
