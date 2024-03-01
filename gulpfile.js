@@ -74,6 +74,15 @@ export const fonts = () => {
     .pipe(gulp.dest('build/fonts'));
 };
 
+export const minifyStyles = () => {
+  return gulp
+    .src(paths.styles.dest + 'style.css')
+    .pipe(gulpSass({outputStyle: 'compressed'}).on('error', gulpSass.logError))
+    .pipe(gulp.dest(paths.styles.dest));
+};
+
+gulp.task('minifyStyles', minifyStyles);
+
 gulp.task('fonts', fonts);
 
 const server = (done) => {

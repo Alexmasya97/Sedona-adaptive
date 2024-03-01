@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="icon" href="./image/icons/Favicon _ 32.webp">
+  <link rel="preload" href="./image/desktop/back-desktop.jpg.webp" as="image">
+  <link rel="preload" href="./image/mobila/back-mobile.jpg.webp" as="image">
+  <link rel="preload" href="./image/icons/text-index.svg.webp" as="image">
   <title>«Sedona»</title>
 </head>
 
@@ -81,7 +84,7 @@
          <use xlink:href="#logo-svg"></use>
         </svg>
       </a>
-      <nav class="nav--open nav nav--open">
+      <nav class="nav">
         <button class="nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -132,7 +135,7 @@
         <ul class="service__list">
           <li class="service__item">
             <div class="service__svg">
-              <img class="service__icon" src="./image/icon/icons/icon-house.svg" alt="house icon">
+              <img class="service__icon" src="./image/icon/icons/icon-house.svg" alt="house icon" width="39" height="37">
             </div>
             <div class="service__info">
               <h3 class="service__heading title">Жильё</h3>
@@ -142,7 +145,7 @@
 
           <li class="service__item">
             <div class="service__svg">
-              <img class="service__icon" src="./image/icon/icons/icon-burger.svg" alt="burger icon">
+              <img class="service__icon" src="./image/icon/icons/icon-burger.svg" alt="burger icon" width="40" height="35">
             </div>
             <div class="service__info">
               <h3 class="service__heading title">Еда</h3>
@@ -152,7 +155,7 @@
 
           <li class="service__item">
             <div class="service__svg">
-              <img class="service__icon" src="./image/icon/icons/icon-gift.svg" alt="gift icon">
+              <img class="service__icon" src="./image/icon/icons/icon-gift.svg" alt="gift icon" width="32" height="38">
             </div>
             <div class="service__info">
               <h3 class="service__heading title">Сувениры</h3>
@@ -210,7 +213,7 @@
 
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
-        <iframe class="map__google" width="320" height="350"
+        <iframe class="map__google" width="320" height="350" title="Sedona Location"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.18173350387!2d-111.83633831988399!3d34.85437145319606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1708657346327!5m2!1sru!2sru"
           width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
