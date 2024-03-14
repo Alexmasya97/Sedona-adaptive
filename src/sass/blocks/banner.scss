@@ -1,0 +1,33 @@
+.banner {
+  background: url(../image/desktop/back-desktop.jpg.webp) no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-position: 60% 60%;
+
+  &__slogan {
+    min-width: 229px;
+    align-self: center;
+    justify-self: center;
+    padding: 52px 0 38px;
+
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .banner {
+    &__slogan {
+      min-width: 457px;
+      padding: 95px 0 60px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .banner {
+    &__slogan {
+      min-width: 460px;
+      padding: 101px 0 63px;
+    }
+  }
+}

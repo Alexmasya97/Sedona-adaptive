@@ -25,11 +25,10 @@ const paths = {
     src: 'src/image/**/*.{png,jpg,jpeg}',
     dest: 'build/image/'
   },
-  svg:  {
+  svg: {
     src: 'src/image/**/*.svg',
     dest: 'build/image/icon'
   },
-
   fonts: {
     src: 'src/fonts/**/*.ttf',
     dest: 'build/fonts/'
@@ -65,7 +64,7 @@ export const svg = () => {
 export const convertToWebp = () => {
   return gulp
     .src(paths.images.src)
-    .pipe(webp( {quality:90}))
+    .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest(paths.images.dest));
 };
 
@@ -77,7 +76,7 @@ export const fonts = () => {
 export const minifyStyles = () => {
   return gulp
     .src(paths.styles.dest + 'style.css')
-    .pipe(gulpSass({outputStyle: 'compressed'}).on('error', gulpSass.logError))
+    .pipe(gulpSass({ outputStyle: 'compressed' }).on('error', gulpSass.logError))
     .pipe(gulp.dest(paths.styles.dest));
 };
 
@@ -120,11 +119,6 @@ gulp.task(
   gulp.series(clean, gulp.parallel(styles, html, svg, convertToWebp, fonts), gulp.parallel(server, watcher))
 );
 
-
 gulp.task('default', gulp.series(clean, gulp.parallel(svg, convertToWebp)));
 
-gulp.task('fonts', function() {
-  return gulp.src('app/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts'))
-})
 

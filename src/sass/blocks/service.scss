@@ -19,9 +19,11 @@
     }
 
   }
+
   &__svg {
     max-width: 40px;
   }
+
   &__icon {
     max-width: 40px;
   }
@@ -39,9 +41,7 @@
   &__text {
     text-align: start;
   }
-  }
-
-
+}
 
 @media (min-width: $tablet-width) {
   .service {
@@ -64,12 +64,13 @@
 
     &__svg {
       max-width: 76px;
-      align-self:center;
+      align-self: center;
 
     }
+
     &__icon {
       min-width: 76px;
-      justify-self:center;
+      justify-self: center;
 
     }
 
@@ -80,12 +81,5 @@
     &__text {
       text-align: center;
     }
-
-    // &__svg {
-    //   text-align: center;
-    // }
-
   }
-
 }
-

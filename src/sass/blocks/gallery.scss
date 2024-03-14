@@ -1,0 +1,142 @@
+.gallery {
+
+  &__item {
+    border-top: 1px solid rgb(229, 229, 229);
+    padding: 23px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__author {
+    font-size: 14px;
+    font-weight: 400px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__like {
+    font-weight: 700;
+    padding-left: 13px;
+  }
+}
+
+.footer {
+  &__like {
+    display: flex;
+    align-items: baseline;
+
+  }
+
+  &__svg-like {
+    fill: black;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .gallery {
+    margin: 0 auto;
+
+    padding: 0 60px;
+
+    &__item {
+      border: none;
+      padding: 0;
+      gap: 0;
+      width: 324px;
+
+      &:nth-of-type(1) {
+        min-width: 648px;
+      }
+
+      &:last-child {
+
+        padding-right: 324px;
+
+      }
+
+    }
+
+    &__footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 10px;
+      background-color: #F2F2F2;
+      padding: 20px 20px 15px;
+
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+
+    }
+
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .gallery {
+    padding: 0 0;
+
+    &__item {
+      width: 400px;
+      position: relative;
+
+      &:nth-of-type(1) {
+        min-width: 1200px;
+      }
+
+      &:last-child {
+        padding-right: 0px;
+      }
+    }
+
+    &__footer {
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      color: #ffffff;
+      padding: 0;
+      height: 80px;
+      align-items: center;
+    }
+  }
+
+  .footer {
+    &__sign {
+      padding-left: 20px;
+    }
+
+    &__like {
+      padding-right: 20px;
+
+      &::before {
+        fill: $white;
+      }
+    }
+
+    &__svg-like {
+      fill: $white;
+      opacity: 1;
+    }
+  }
+}

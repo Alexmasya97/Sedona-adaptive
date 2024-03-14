@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/PTSans-Regular.woff2") format("woff2"),
-  url("../fonts/PTSans-Regular.woff") format("woff");
+    url("../fonts/PTSans-Regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -12,9 +12,10 @@
   font-style: bold;
   font-weight: 700;
   src: url("../fonts/PTSans-Bold.woff2") format("woff2"),
-  url("../fonts/PTSans-Bold.woff") format("woff2");
+    url("../fonts/PTSans-Bold.woff") format("woff2");
   font-display: swap;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -33,8 +34,13 @@ img {
   display: block;
 }
 
+video {
+  width: 320px;
+}
+
 
 ul,
+body,
 li,
 p,
 span,
@@ -43,7 +49,14 @@ h3,
 button {
   margin: 0;
   padding: 0;
-  border: initial
+  border: initial;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  min-width: 280px;
 }
 
 a {
@@ -59,12 +72,30 @@ img {
   height: auto;
 }
 
+fieldset {
+  border: 0;
+}
+
+input,
+label,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  display: inline-block;
+
+  &::placeholder {
+    color: inherit
+  }
+}
+
 .page__body {
   background-color: $main-beige;
   margin: 0;
   font-size: 14px;
   padding: 0;
-  font-family: "PTSans-Regular","Arial", sans-serif;
+  font-family: "PTSans-Regular", "Arial", sans-serif;
 }
 
 .title {
@@ -74,7 +105,7 @@ img {
   text-align: center;
   text-transform: uppercase;
   font-family: PTSans-Regular;
-  font-family: "PT Sans","Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
 
 }
 
@@ -84,7 +115,7 @@ img {
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
-  }
+}
 
 .blue-bottom {
   background-color: $main-blue;

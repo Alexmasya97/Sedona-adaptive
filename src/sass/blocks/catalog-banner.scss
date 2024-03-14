@@ -1,0 +1,15 @@
+.catalog-banner {
+  background: url(../image/desktop/back-desktop.jpg.webp) no-repeat;
+  background-position: 55% 60%;
+  height: 158px;
+  &__slogan{
+    width: 229px;
+    height: 39px;
+  }
+  &__decoration {
+    object-fit: none;
+    bottom: 0;
+    height: 57px;
+    justify-self: center;
+  }
+}
