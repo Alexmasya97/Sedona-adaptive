@@ -38,7 +38,6 @@ video {
   width: 320px;
 }
 
-
 ul,
 body,
 li,
@@ -50,6 +49,7 @@ button {
   margin: 0;
   padding: 0;
   border: initial;
+  background-color: inherit;
 }
 
 fieldset {
@@ -106,7 +106,6 @@ textarea {
   text-transform: uppercase;
   font-family: PTSans-Regular;
   font-family: "PT Sans", "Arial", sans-serif;
-
 }
 
 .subtitle {
