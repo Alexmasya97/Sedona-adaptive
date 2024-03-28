@@ -1,0 +1,141 @@
+.video {
+  border-top: 1px solid rgb(229, 229, 229);
+  background: $white;
+
+  &__text {
+    padding: 32px 28px;
+  }
+
+  &__button {
+    background-color: transparent;
+  }
+
+  &__image-poster {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__controls {
+    padding: 0 20px;
+    position: absolute;
+    bottom: -66px;
+  }
+
+  &__scroll-bar {
+    position: relative;
+    height: 45px;
+    min-width: 280px;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 235px;
+      height: 3px;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 22%;
+      transform: translate(-50%, -50%);
+      width: 9px;
+      height: 9px;
+      background-color: #ffffff;
+      border-radius: 50%;
+    }
+  }
+
+  &__control-buttons {
+    background-color: rgb(242, 242, 242);
+    height: 66px;
+    display: flex;
+    justify-content: end;
+    gap: 31px;
+    padding: 0 25px;
+  }
+
+  &__icon-fullscreen,
+  &__icon-subtitles,
+  &__icon-replay {
+    fill: rgb(92, 104, 112);
+  }
+
+  &__button--subtitles {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .video {
+    padding: 0 60px;
+    border: none;
+
+    &__controls {
+      padding: 0;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+    }
+
+    &__scroll-bar {
+      height: 93px;
+
+      &::before {
+        width: 389px;
+        left: 46%;
+      }
+
+      &::after {
+        width: 13px;
+        height: 13px;
+        left: 35%;
+      }
+    }
+
+    &__control-buttons {
+      position: absolute;
+      bottom: 0;
+      height: 93px;
+      width: 100%;
+      background-color: transparent;
+      padding: 0;
+      gap: 22px;
+    }
+
+    &__icon-fullscreen,
+    &__icon-subtitles,
+    &__icon-replay {
+      fill: $white;
+    }
+
+    &__icon-fullscreen {
+      padding-right: 35px;
+    }
+
+    &__icon-replay {
+      padding-left: 35px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video {
+    padding: 0 200px;
+
+    &__scroll-bar {
+
+      &::before {
+        width: 540px;
+
+      }
+    }
+  }
+}

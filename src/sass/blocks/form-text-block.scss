@@ -1,0 +1,21 @@
+.form-text-block {
+  background-color: $white;
+  padding: 36px 11px 16px;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 39px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form-text-block {
+    padding: 36px 168px 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-text-block {
+    padding: 36px 350px 16px;
+  }
+}

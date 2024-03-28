@@ -1,0 +1,21 @@
+.booking-link {
+  background-color: $white;
+  padding: 33px 20px 49px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  &__text {
+    padding: 0 10px;
+  }
+}
+@media (min-width: $tablet-width) {
+  .booking-link {
+    padding: 58px 155px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .booking-link {
+    padding-left: 411px;
+    padding-right: 411px;
+  }
+}

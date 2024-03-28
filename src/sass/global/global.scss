@@ -1,0 +1,140 @@
+@font-face {
+  font-family: "PTSans-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/PTSans-Regular.woff2") format("woff2"),
+    url("../fonts/PTSans-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PTSans-Bold";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../fonts/PTSans-Bold.woff2") format("woff2"),
+    url("../fonts/PTSans-Bold.woff") format("woff2");
+  font-display: swap;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  display: block;
+}
+
+video {
+  width: 320px;
+}
+
+ul,
+body,
+li,
+p,
+span,
+h2,
+h3,
+button {
+  margin: 0;
+  padding: 0;
+  border: initial;
+  background-color: inherit;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  min-width: 280px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+fieldset {
+  border: 0;
+}
+
+input,
+label,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  display: inline-block;
+
+  &::placeholder {
+    color: inherit
+  }
+}
+
+.page__body {
+  background-color: $main-beige;
+  margin: 0;
+  font-size: 14px;
+  padding: 0;
+  font-family: "PTSans-Regular", "Arial", sans-serif;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: PTSans-Regular;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.blue-bottom {
+  background-color: $main-blue;
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 14px 32px 17px;
+
+  &:hover {
+    background-color: #669EC0;
+  }
+
+  &:visited {
+    background-color: #5496BD;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .title {
+    font-size: 21px;
+  }
+}
